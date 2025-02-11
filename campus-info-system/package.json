@@ -1,0 +1,44 @@
+{
+  "name": "campus-information-system.api",
+  "version": "1.0.0",
+  "description": "This repository contains the code for a campus information system.",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "dev": "nodemon src/app.ts"
+  },
+  "author": "David Michael Montiza, Trisha Marie Ostria, Mary Joy Ramos, John Francis Cerafica, Donald Bandayrel, Manuel Soldevilla, Rienier Gutierrez",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jsonwebtoken": "^9.0.7",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^144.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.0",
+    "nodemailer": "^6.10.0",
+    "otp-generator": "^4.0.1",
+    "reflect-metadata": "^0.2.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "validator": "^13.12.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.9.0",
+    "@types/nodemailer": "^6.4.17",
+    "@types/otp-generator": "^4.0.2",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.7",
+    "@types/validator": "^13.12.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
