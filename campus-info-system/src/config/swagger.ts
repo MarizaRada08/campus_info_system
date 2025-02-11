@@ -9,19 +9,19 @@ const options = {
 
     // Define API metadata
     info: {
-      title: "Web API Campus", // Name of your API
+      title: "Web API ", // Name of your API
       version: "1.0.0", // API version
       description: "API documentation for Web API Library", // Brief description
       contact: {
-        name: "David Michael Montiza", // Contact person
-        email: "dm09216181469@gmail.com", // Contact email
+        name: "", // Contact person
+        email: "", // Contact email
       },
     },
 
     // Define server environments where the API can be accessed
     servers: [
       {
-        url: "http://localhost:4000", // Local development server
+        url: "http://localhost:3000", // Local development server
         description: "Development server",
       },
       {
