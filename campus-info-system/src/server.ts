@@ -21,15 +21,12 @@ import transactionRoutes from "./routes/transactionRoutes";
 import authRoutes from "./routes/authRoutes";
 import librarianRoutes from "./routes/librarianRoutes";
 import attendanceRoutes from "./routes/attendanceRoutes";
-import courseRoutes from "./routes/courseRoutes";
-import departmentRoutes from "./routes/departmentRoutes";
 import facultyRoutes from "./routes/facultyRoutes";
-import gradeRoutes from "./routes/gradeRoutes";
 import leaveRoutes from "./routes/leaveRoutes";
-import scheduleRoutes from "./routes/scheduleRoutes";
 import enrollmentRoutes from "./routes/enrollmentRoutes";
 import studentRoutes from "./routes/studentRoutes";
 import subjectsRoutes from "./routes/subjectsRoutes";
+import otpRoutes from "./routes/otpRoutes";
 
 export const application = express();
 export let httpServer: ReturnType<typeof http.createServer>;
@@ -82,6 +79,7 @@ export const Main = async () => {
   logging.log("----------------------------------------");
   logging.log("Define Controller Routing");
   logging.log("----------------------------------------");
+  application.use(otpRoutes);
   application.use(authRoutes)
   application.use(bookRoutes);
   application.use(categoryRoutes);
@@ -90,13 +88,9 @@ export const Main = async () => {
   application.use(shelfRoutes);
   application.use(transactionRoutes);
   application.use(attendanceRoutes);
-  application.use(courseRoutes);
-  application.use(departmentRoutes);
   application.use(enrollmentRoutes);
   application.use(facultyRoutes);
-  application.use(gradeRoutes);
   application.use(leaveRoutes);
-  application.use(scheduleRoutes);
   application.use(studentRoutes);
   application.use(subjectsRoutes);
   

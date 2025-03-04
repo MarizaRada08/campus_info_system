@@ -9,7 +9,7 @@ export const userSchema = new Schema(
     email: { type: String, length: 100, required: true, unique: true },
     // Password field - required and max 50 characters
     password: { type: String, length: 50, required: true },
-    isVerified: { type: Boolean, default: false },
+    verified: { type: Boolean, default: false },
   },
   // Enable automatic timestamp fields (createdAt and updatedAt)
   { timestamps: true }

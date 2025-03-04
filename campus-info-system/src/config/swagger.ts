@@ -11,10 +11,10 @@ const options = {
     info: {
       title: "Web API ", // Name of your API
       version: "1.0.0", // API version
-      description: "API documentation for Web API Library", // Brief description
+      description: "API documentation for Web API Campus", // Brief description
       contact: {
-        name: "", // Contact person
-        email: "", // Contact email
+        name: "Mariza Ballenas Rada", // Contact person
+        email: "marizarada6@gmail.com", // Contact email
       },
     },
 
