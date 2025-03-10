@@ -10,7 +10,6 @@ export interface IFaculty extends Document {
   Email: String;
   Contact: String;
   Faculty_Role: String;
-  Department_ID: Number; 
   Leave_ID: Number; 
   Attendance_ID: Number;
   Student_Grade: String;

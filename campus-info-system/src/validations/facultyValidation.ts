@@ -34,9 +34,6 @@ const facultyValidationSchema = Joi.object({
   Faculty_Role: Joi.string().required().messages({
     "any.required": "Faculty role is required",
   }),
-  Department_ID: Joi.number().required().messages({
-    "any.required": "Department ID is required",
-  }),
   Leave_ID: Joi.number().required().messages({
     "any.required": "Leave ID is required",
   }),

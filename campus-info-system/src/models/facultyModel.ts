@@ -10,7 +10,6 @@ interface leaveInterface extends Document{
   Email: String;
   Contact: String;
   Faculty_Role: String;
-  Department_ID: Number;
   Leave_ID: Number; 
   Attendance_ID: Number;
   Student_Grade: String;
@@ -27,7 +26,6 @@ export const facultySchema = new Schema(
     Email: { type: String, required: true, unique: true },
     Contact: { type: String, required: true },
     Faculty_Role: { type: String, required: true },
-    Department_ID: { type: Number, required: true },
     Leave_ID: { type: Number, required: true },
     Attendance_ID: { type: Number, required: true },
     Student_Grade: { type: String, required: true },

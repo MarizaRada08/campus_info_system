@@ -60,10 +60,6 @@ const facultyController = new FacultyController();
  *           type: string
  *           description: Role of the faculty member
  *           example: "Professor"
- *         Department_ID:
- *           type: number
- *           description: Foreign Key to the Department
- *           example: "DPT-001"
  *         Leave_ID:
  *           type: number
  *           description: Foreign Key to the Leave
@@ -85,7 +81,6 @@ const facultyController = new FacultyController();
  *         - Email
  *         - Contact
  *         - Faculty_Role
- *         - Department_ID
  *
  *     FacultyResponse:
  *       type: object
@@ -115,9 +110,6 @@ const facultyController = new FacultyController();
  *         Faculty_Role:
  *           type: string
  *           example: "Professor"
- *         Department_ID:
- *           type: string
- *           example: "DPT-001"
  *         Leave_ID:
  *           type: string
  *           example: "LV-001"
@@ -127,146 +119,6 @@ const facultyController = new FacultyController();
  *         Student_Grade:
  *           type: string
  *           example: "A"
- */
-
-/**
- * @swagger
- * /api/faculty:
- *   post:
- *     summary: Create a new faculty member
- *     tags: [Faculty]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/Faculty'
- *     responses:
- *       201:
- *         description: Faculty member created successfully
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/FacultyResponse'
- *       400:
- *         description: Validation error
- *       409:
- *         description: Faculty member already exists
- * 
- *   get:
- *     summary: Get all faculty members
- *     tags: [Faculty]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: query
- *         name: page
- *         schema:
- *           type: integer
- *           minimum: 1
- *           default: 1
- *         description: Page number
- *       - in: query
- *         name: limit
- *         schema:
- *           type: integer
- *           minimum: 1
- *           maximum: 100
- *           default: 10
- *         description: Number of items per page
- *     responses:
- *       200:
- *         description: List of faculty members
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 data:
- *                   type: array
- *                   items:
- *                     $ref: '#/components/schemas/FacultyResponse'
- *                 pagination:
- *                   type: object
- *                   properties:
- *                     total:
- *                       type: integer
- *                     pages:
- *                       type: integer
- *                     page:
- *                       type: integer
- *                     limit:
- *                       type: integer
- */
-
-/**
- * @swagger
- * /api/faculty/{id}:
- *   get:
- *     summary: Get faculty member by ID
- *     tags: [Faculty]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *         description: Faculty ID
- *     responses:
- *       200:
- *         description: Faculty member details
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/FacultyResponse'
- *       404:
- *         description: Faculty member not found
- *   put:
- *     summary: Update faculty member
- *     tags: [Faculty]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *         description: Faculty ID
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/Faculty'
- *     responses:
- *       200:
- *         description: Faculty member updated successfully
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/FacultyResponse'
- *       404:
- *         description: Faculty member not found
- *   delete:
- *     summary: Delete faculty member
- *     tags: [Faculty]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *         description: Faculty ID
- *     responses:
- *       204:
- *         description: Faculty member deleted successfully
- *       404:
- *         description: Faculty member not found
  */
 
 const apiVersionV1 = "v1";
